@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.dkb.universityofsalfordpasswordmanagingapplication.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_passwordsFragment"
+            app:destination="@id/passwordsFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordsFragment"
+        android:name="com.dkb.universityofsalfordpasswordmanagingapplication.PasswordsFragment"
+        android:label="fragment_passwords"
+        tools:layout="@layout/fragment_passwords" >
+        <action
+            android:id="@+id/action_passwordsFragment_to_passwordCreateFragment"
+            app:destination="@id/passwordCreateFragment" />
+        <action
+            android:id="@+id/action_passwordsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_passwordsFragment_to_passwordEditFragment"
+            app:destination="@id/passwordEditFragment" />
+        <action
+            android:id="@+id/action_passwordsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.dkb.universityofsalfordpasswordmanagingapplication.registerFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordCreateFragment"
+        android:name="com.dkb.universityofsalfordpasswordmanagingapplication.passwordCreateFragment"
+        android:label="fragment_password_create"
+        tools:layout="@layout/fragment_password_create" >
+        <action
+            android:id="@+id/action_passwordCreateFragment_to_passwordsFragment"
+            app:destination="@id/passwordsFragment" />
+        <action
+            android:id="@+id/action_passwordCreateFragment_to_generatePasswordFragment"
+            app:destination="@id/generatePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordEditFragment"
+        android:name="com.dkb.universityofsalfordpasswordmanagingapplication.passwordEditFragment"
+        android:label="fragment_password_edit"
+        tools:layout="@layout/fragment_password_edit" >
+        <action
+            android:id="@+id/action_passwordEditFragment_to_passwordsFragment"
+            app:destination="@id/passwordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dkb.universityofsalfordpasswordmanagingapplication.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_passwordsFragment"
+            app:destination="@id/passwordsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_passwordResetFragment"
+            app:destination="@id/passwordResetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordResetFragment"
+        android:name="com.dkb.universityofsalfordpasswordmanagingapplication.passwordResetFragment"
+        android:label="fragment_password_reset"
+        tools:layout="@layout/fragment_password_reset" >
+        <action
+            android:id="@+id/action_passwordResetFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generatePasswordFragment"
+        android:name="com.dkb.universityofsalfordpasswordmanagingapplication.generatePasswordFragment"
+        android:label="fragment_generate_password"
+        tools:layout="@layout/fragment_generate_password" >
+        <action
+            android:id="@+id/action_generatePasswordFragment_to_passwordCreateFragment"
+            app:destination="@id/passwordCreateFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,30 @@
+{
+  "name": "passwordmanagerapp",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "env-cmd -f ./.env jest --forceExit --silent --verbose",
+    "start": "env-cmd -f ./.env nodemon server.js"
+  },
+  "author": "Daniel Kearsley-Brown",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "env-cmd": "^10.1.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "ioredis": "^5.3.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.1.0",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22",
+    "postmark": "^3.0.15",
+    "redis": "^4.6.5",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
+  }
+}
